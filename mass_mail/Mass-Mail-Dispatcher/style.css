@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: #eb4559; */
+    /* background-color: black; */
+}
+body{
+    background-image: linear-gradient(135deg,rgb(0,0,0,0.7),rgb(0,0,0,0.6)),url("./bg.jpg");
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    /* background-color: #eb4559; */
+    flex-wrap: wrap;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid yellow; */
+
+}
+
+.select input {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin: 6vh auto;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    font-weight: 600;
+    font-size: 1rem;
+    outline: none;
+    width: 350px;
+}
+
+.select input::file-selector-button {
+    background: #206a5d;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 1px 1px #6b4559;
+    outline: none;
+}
+
+.select input::file-selector-button:hover {
+    background: #438a5e;
+    cursor: pointer;
+}
+
+
+.select h1 {
+    color: white;
+    font-size: 6rem;
+    /* margin-bottom: 15vh; */
+    padding: 5vh;
+    text-align: center;
+    transition: .2s;
+}
+
+
+.select button {
+    padding: .8rem;
+    background: white;
+    border: 0;
+    font-size: 2.3vh;
+    /* color: #ff5361; */
+    color: #206a5d;
+    outline: none;
+    cursor: pointer;
+    width: 40vh;
+    margin: 4vh auto;
+    border-radius: 2rem;
+    font-weight: 800;
+}
+
+/* .mailInfo{
+    border: 1px solid yellow;
+} */
+.mailInfo form {
+    /* background: rgb(255, 255, 255); */
+    background-color: rgb(169, 167, 167);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 3vw;
+    width: 90%;
+    max-width: 660px;
+    border-radius: .5rem;
+    transition: .2s;
+}
+.mailInfo form:hover {
+    transform: scale(1.02);
+}
+
+form h2 {
+    letter-spacing: .1rem;
+    word-spacing: .5rem;
+    color: rgb(71, 71, 71);
+    text-align: center;
+    font-weight: 900;
+    margin: 3vh 0;
+    /* background-color: white; */
+    background-color: rgb(169, 167, 167);
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+form input,
+textarea {
+    border: 0;
+    background: rgb(236, 235, 235);
+    padding: 1rem;
+    margin: 1vh 1vh;
+    border-radius: .5rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+form textarea {
+    white-space: pre-line;
+}
+
+form button {
+    padding: .8rem;
+    /* background: #ff5361; */
+    background: #206a5d;
+    border: 0;
+    font-size: 2.3vh;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    width: 17vh;
+    margin: 1vh auto;
+    border-radius: 2rem;
+    margin-top: 2vh;
+    box-shadow: 5px 5px 10px black;
+}
+
+form button:hover {
+    /* background: #eb4559; */
+    background: #438a5e;
+}
+
+.tables {
+    border-top: 2px solid white;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 10vh auto;
+    color: white;
+    flex-wrap: wrap-reverse;
+}
+
+.tables h2 {
+    margin: 5vh 0;
+}
+
+.tables td:hover {
+    transform: scale(1.02);
+    color: #ffd4d8;
+}
+
+.footer {
+
+    position: absolute;
+    text-align: center;
+
+    bottom: 1;
+
+    background-color: #eb4559;
+    height: 20vh;
+    width: 100%;
+}
+
+li {
+    display: inline-block;
+}
+.footer .copyright{
+    width: 20%;
+    align-items: center;
+    margin: auto;
+}
+
+.footer h3 {
+    font-weight: 600;
+    padding-top: 0.7rem;
+    padding-bottom: 0.5rem;
+    color: white;
+
+}
+
+.footer p {
+    font-weight: 600;
+    padding-top: 1em;
+    padding-bottom: 0.7em;
+    color: white;
+    border-bottom: .1rem solid #CBCBCB3B;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    height: 1.7rem;
+    width: 2.4rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    background: #CBCBCB3B;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 0.7rem;
+    padding-top: 0.8rem;
+    transition: 0.2s;
+}
+
+.fa-brands:hover {
+    color: rgb(255, 255, 255);
+    background: #ff0015;
+    transform: scale(1.4);
+}
+
+/* ------------phone compatibility---------- */
+
+@media(max-width: 669px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .select h1 {
+        font-size: 3rem;
+        margin-top: 22vh;
+    }
+
+    .select input {
+        width: 35vh;
+        font-size: 1rem;
+        margin-top: 22vh;
+    }
+
+    .select input::file-selector-button {
+        padding: 1rem .5em;
+        
+    }
+
+    .mailInfo form {
+        
+        /* padding: 0 auto; */
+        width: 95%;
+        /* max-width: 660px; */
+        /* margin: 100% auto; */
+        margin-top: 60%;
+        /* display: block; */
+    }
+
+    .tables {
+        margin-top: 120vh;
+    }
+
+    form h2 {
+        letter-spacing: 0;
+        word-spacing:.2rem;
+        font-size: 1.6rem;
+    }
+    .footer .copyright{
+        width: 90%;
+    }
+    .footer ul li a{
+        margin-bottom: 5vh;
+    }
+}
